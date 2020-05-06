@@ -67,9 +67,9 @@ git add .
 or to add certain file or directory, run
 ```
 git add ./css
-``
+```
 Where you add all files in `/css` directory. you can also add only one file by running:
-``
+```
 git add ./css/styles.css
 ```
 Which adds only `./css/styles.css` file.
