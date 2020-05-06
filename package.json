@@ -1,0 +1,16 @@
+{
+  "name": "Shahidian",
+  "version": "0.1.0",
+  "productName": "Shahidian",
+  "main": "css/styles.css",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "author": "Elnaz Shahidian <hello@shahidian.com> (http://shahidian.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElnazShahidian/shahidian"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
