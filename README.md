@@ -10,6 +10,11 @@ You need:
 - [npm](https://www.npmjs.com/package/npm)
 - [http-server](https://www.npmjs.com/package/http-server)
 
+To install `http-server` run
+```
+npm install -g http-server
+```
+
 before you start. Once you have them ready, clone the project
 ```
 git clone https://github.com/ElnazShahidian/shahidian.git
