@@ -42,7 +42,7 @@ Skeleton/
 ├── index.html
 ├── css/
 │   ├── normalize.min.css
-│   └── skeleton.css
+│   └── styles.css
 └── images/
     └── favicon.ico
 
