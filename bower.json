@@ -1,0 +1,21 @@
+{
+  "name": "Shahidian",
+  "version": "0.1.0",
+  "homepage": "http://shahidian.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElnazShahidian/shahidian"
+  },
+  "authors": [
+    "Elnaz Shahidian <hello@shahidian.com> (http://shahidian.com/)"
+  ],
+  "description": "The personal website of Elnaz Shahidian.",
+  "main": "css/styles.css",
+  "keywords": [
+    "css",
+    "html",
+    "responsive",
+    "javascript"
+  ],
+  "license": "MIT"
+}
