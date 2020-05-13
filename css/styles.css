@@ -472,25 +472,22 @@ there.
     flex-direction: row;
   }
 
-  .logo{
-    display: flex;
-    
-  }
-
   .logo {
-   
+    display: flex;
     font-weight: 800;
     font: 5rem  'Indie Flower', sans-serif;
     color: darkcyan;
-    text-shadow: 0 0 4px coral;
+    text-shadow: 5px 0 5px brown;
     margin:20px 20px;
     flex:2;
   }
 
   .logo:hover{
     font-family:  'Shadows Into Light', cursive;
-    color: coral;
-    font-size: 3rem;
+    color: rgb(135, 69, 46); 
+    text-shadow: 2px 0 0 darkcyan;
+    font-size: 3.5rem;
+    transition: .7s;
   }
 
   .menu {
