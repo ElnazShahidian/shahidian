@@ -15,6 +15,10 @@
 - Media Queries
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald&family=Shadows+Into+Light:wght@300&display=swap');
+
+
+
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -154,7 +158,9 @@ text-indent: 5rem;}
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #1EAEDB;
+  text-decoration: none;
+ }
 a:hover {
   color: #0FA0CE; }
 
@@ -283,8 +289,8 @@ label > .label-body {
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul {
-  list-style: circle inside; }
+/* ul {
+  list-style: circle inside; } */
 ol {
   list-style: decimal inside; }
 ol, ul {
@@ -439,8 +445,97 @@ there.
   }
 }
 .header {
-  grid-area: header;
+  grid-area: header; 
+  position: relative;
+   background-color: rgba(0,0,0,0.4);
+  /* background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)); */
 }
+
+  .header::after { 
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0 ;
+  background-image: url("../images/cover3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
+  background-position: center;
+  z-index: -1
+  }
+
+  .head-container{
+    display: flex ;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .logo{
+    display: flex;
+    
+  }
+
+  .logo {
+   
+    font-weight: 800;
+    font: 5rem  'Indie Flower', sans-serif;
+    color: darkcyan;
+    text-shadow: 0 0 4px coral;
+    margin:20px 20px;
+    flex:2;
+  }
+
+  .logo:hover{
+    font-family:  'Shadows Into Light', cursive;
+    color: coral;
+    font-size: 3rem;
+  }
+
+  .menu {
+    display: flex;
+    font: 4rem  'Oswald', sans-serif;
+    flex:1;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin:20px 20px;
+  }
+
+  .menu li {
+     list-style-type: none;
+     flex: 1;
+     margin: 10px;
+     box-shadow:( 0 0 6px brown);
+     background-color: rgba(0,0,0,0.2);
+    }
+
+  .menu a{
+    display: block;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    border: 2px solid darkcyan;
+    border-radius: 5px;
+    transition: .3s;
+  }
+
+  .menu a:hover {
+    background-color: rgba(253, 94, 31, .7);
+  }
+
+  @media screen and (max-width: 900px){
+    .head-container{
+      flex-direction: column;
+    }
+    .menu{
+      flex-direction: column;
+    }
+    .menu li{
+      min-width: 150px;
+    }
+  }
 
 .main {
   grid-area: main;
