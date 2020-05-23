@@ -15,7 +15,7 @@
 - Media Queries
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald&family=Shadows+Into+Light:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@500&display=swap');
 
 
 
@@ -115,18 +115,18 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element*/
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
   direction: ltr;
- }
+ } 
 
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-h1, h2, h3, h4, h5, h6 {
+ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300; }
@@ -145,7 +145,7 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
   h4 { font-size: 3.0rem; }
   h5 { font-size: 2.4rem; }
   h6 { font-size: 1.5rem; }
-}
+} */
 
 p {
   margin-top: 0; 
@@ -289,12 +289,12 @@ label > .label-body {
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* ul {
-  list-style: circle inside; } */
+ul {
+  list-style: circle inside; } 
 ol {
   list-style: decimal inside; }
 ol, ul {
-  padding-left: 0;
+  padding-left: 10px;
   margin-top: 0; }
 ul ul,
 ul ol,
@@ -302,8 +302,8 @@ ol ol,
 ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
   font-size: 90%; }
-li {
-  margin-bottom: 1rem; }
+  li {
+    margin-bottom: 1rem; }
 
 
 /* Code
@@ -347,16 +347,16 @@ textarea,
 select,
 fieldset {
   margin-bottom: 1.5rem; }
-pre,
+/* pre,
 blockquote,
 dl,
 figure,
 table,
-p,
+ p, 
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 2.5rem; } */
 
 
 /* Utilities
@@ -417,131 +417,94 @@ there.
 @media (min-width: 1000px) {}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
-
-
-.site > * {
-  border: 1px solid black;
-  padding: 20px;
+@media (min-width: 1200px) {} 
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.site {
-  display: grid;
-  grid-template-columns: 200px auto;
-  grid-template-rows: 100vh auto auto;
-  grid-template-areas: "header header"
-                       "navigation main"
-                       "footer footer";
+a{
+  text-decoration: none;
+  color: black;
 }
-
-@media screen and (max-width: 900px) {
-  .site {
-    grid-template-columns: auto;
-    grid-template-rows: 100vh repeat(3 ,auto);
-    grid-template-areas: "header"
-                         "main" 
-                         "navigation"
-                         "footer";
-  }
-}
-.header {
-  grid-area: header; 
+  
+.site{
+  display: flex;
+  flex-direction: column;
   position: relative;
-   background-color: rgba(0,0,0,0.4);
-  /* background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)); */
+}
+.menu{
+  display: flex;
+  justify-content: flex-start;
+  background-color: #e79b65;
+  font-size: 4vmin;
+  font-family: 'Playfair Display', serif;
+}
+
+.menu ul{
+  display: flex;
+  }
+
+.menu ul li{
+  padding:10px;
+  list-style: none;
+}
+.menu a{
+  transition: .2s;
+}
+
+.menu a:hover{
+  color: rgb(90, 85, 85);
+  font-size: 3vmin;
+}
+
+.header {
+  position: relative;
+   display: flex ;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: #d64504;
 }
 
   .header::after { 
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10%;
   bottom: 0;
-  left: 0 ;
-  background-image: url("../images/cover3.jpg");
+  left: 10% ;
+  background-image: url("../images/cover.jpg");
   background-repeat: no-repeat;
   background-size: cover; 
   background-attachment: fixed;
   background-position: center;
-  z-index: -1
   }
 
-  .head-container{
-    display: flex ;
-    align-items: flex-start;
-    flex-direction: row;
+ .about{
+     width: 40%;
+      height: 50%;
+      text-align: center;
+      align-self: center;
+      justify-self: center;
+      background-color: aliceblue;
+      opacity: 50%;
+      padding: 40px;
+      z-index: 1;
+      border-radius: 10px;
+      /* font-family: 'Montserrat', sans-serif; */
+      font-family: 'Playfair Display', serif;
+  }
+  .about p {
+      font-size: 3.5vmin;
+      font-weight: 400;
   }
 
-  .logo {
-    display: flex;
-    font-weight: 800;
-    font: 5rem  'Indie Flower', sans-serif;
-    color: darkcyan;
-    text-shadow: 5px 0 5px brown;
-    margin:20px 20px;
-    flex:2;
+  h1{
+      font-size: 4.5vmin;
+      font-weight: 800;
   }
-
-  .logo:hover{
-    font-family:  'Shadows Into Light', cursive;
-    color: rgb(135, 69, 46); 
-    text-shadow: 2px 0 0 darkcyan;
-    font-size: 3.5rem;
-    transition: .7s;
-  }
-
-  .menu {
-    display: flex;
-    font: 4rem  'Oswald', sans-serif;
-    flex:1;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin:20px 20px;
-  }
-
-  .menu li {
-     list-style-type: none;
-     flex: 1;
-     margin: 10px;
-     box-shadow:( 0 0 6px brown);
-     background-color: rgba(0,0,0,0.2);
-    }
-
-  .menu a{
-    display: block;
-    padding: 12px 15px;
-    text-align: center;
-    font-size: 2rem;
-    color: white;
-    border: 2px solid darkcyan;
-    border-radius: 5px;
-    transition: .3s;
-  }
-
-  .menu a:hover {
-    background-color: rgba(253, 94, 31, .7);
-  }
-
-  @media screen and (max-width: 900px){
-    .head-container{
-      flex-direction: column;
-    }
-    .menu{
-      flex-direction: column;
-    }
-    .menu li{
-      min-width: 150px;
-    }
-  }
-
-.main {
-  grid-area: main;
-}
-
-.navigation {
-  grid-area: navigation;
-}
-
-.footer {
-  grid-area: footer;
-}
+  
+  
