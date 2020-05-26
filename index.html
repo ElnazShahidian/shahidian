@@ -31,6 +31,11 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
+  <!-- animate-scroll
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/animatescroll.min.js"></script>
+
 </head>
  <!--<body>
 
@@ -54,10 +59,10 @@
     <div class="menu">
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Quotes</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" onclick="$('#about').animatescroll();">About</a></li>
+        <li><a href="#" onclick="$('#quotes').animatescroll();">Quotes</a></li>
+        <li><a href="#" onclick="$('#projects').animatescroll();">Projects</a></li>
+        <li><a href="#" onclick="$('#contact').animatescroll();">Contact</a></li>
       </ul>
     </div>
 
@@ -76,7 +81,7 @@
                 <span style="float: right; font-style: italic;" >Paige Bartholomew</span>
               </div>
 
-           <section>
+           <section id="projects">
             <div class="content">
               <div class="projects">
                 <div class="title title-g" style="font-family: 'Playfair Display', serif;"><h2>projects</h2><hr></div>
@@ -115,7 +120,7 @@
                 </div>
                 </article>
 
-                <div class="quotes quote-g3">
+                <div class="quotes quote-g3" id="quotes">
                   <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fuga. Quisquam, cupiditate eos. Illum, nulla animi quasi, nemo provident modi dolore.</span>
                 </div>
 
