@@ -486,7 +486,7 @@ a{
   right: 10%;
   bottom: 0;
   left: 10%;
-  background-image: url("../images/cover.jpg");
+  background-image: url("../images/cover1.jpg");
   background-repeat: no-repeat;
   background-size: cover; 
   background-attachment: fixed;
@@ -525,7 +525,7 @@ a{
   
 
   .content{
-    background: url(../images/spiral.jpg);
+    background: url(../images/spiral1.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
