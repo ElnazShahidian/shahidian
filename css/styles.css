@@ -525,18 +525,14 @@ a{
   
 
   .content{
-    width: 100%;
-    
     background: url(../images/spiral.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    
-  }
+   }
 
   .projects{
     display: flex;
@@ -621,47 +617,5 @@ a{
     box-shadow: 0 5px 15px rgb(137, 70, 77);
   }
 
-  /* @media screen and (max-width: 720px){
-    .projects {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 2fr 1fr 6fr 1fr 1fr 6fr 1fr;
-      grid-gap: 20px 10px;
-      grid-template-areas: "first first"
-                           "second second"
-                           "third forth"
-                           "fifth fifth"
-                           "sixth sixth"
-                           "seventh eighth"
-                           "ninth ninth";
-    }
-    .title-g{
-      grid-area: first;
-    }
-    .quote-g1{
-      grid-area: second;
-    }
-    .project-g1{
-      grid-area: third;
-    }
-    .project-g2{
-      grid-area: forth;
-    }
-    .quote-g2{
-      grid-area: fifth;
-    }
-    .quote-g3{
-      grid-area: sixth;
-    }
-    .project-g3{
-      grid-area: seventh;
-    }
-    .project-g4{
-      grid-area: eighth;
-    }
-    .quote-g4{
-      grid-area: ninth;
-    }
-  } */
   
-  
+                
