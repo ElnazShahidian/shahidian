@@ -36,6 +36,10 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="js/animatescroll.min.js"></script>
 
+   <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/index.js"></script>
+
 </head>
  <!--<body>
 
@@ -57,11 +61,25 @@
 <body>
   <div class="site">
     <div class="menu">
-      <ul>
+      <ul class="ulmain">
         <li><a href="#">Home</a></li>
         <li><a href="#" onclick="$('#about').animatescroll();">About</a></li>
-        <li><a href="#" onclick="$('#quotes').animatescroll();">Quotes</a></li>
-        <li><a href="#" onclick="$('#projects').animatescroll();">Projects</a></li>
+        <li class="quo"><a href="#">Quotes</a>
+                                            <ul class="ulq">
+                                              <li><a href="#quote1">quote1</a></li>
+                                              <li><a href="#quote2">Anonymous</a></li>
+                                              <li><a href="#quote3">quote3</a></li>
+                                              <li><a href="#quote4">J.Michael Straczynski</a></li>
+                                            </ul>                 
+                                               </li>
+        <li class="pro"><a href="#">Projects</a>
+                                              <ul class="ulp">
+                                               <li><a onclick="$('#project1').animatescroll();">project1</a></li>
+                                               <li><a onclick="$('#project2').animatescroll();">project2</a></li>
+                                               <li><a onclick="$('#project3').animatescroll();">project3</a></li>
+                                               <li><a onclick="$('#project4').animatescroll();">project4</a></li>
+                                             </ul>                                                               
+                                                </li>
         <li><a href="#" onclick="$('#contact').animatescroll();">Contact</a></li>
       </ul>
     </div>
@@ -81,58 +99,58 @@
                 <span style="float: right; font-style: italic;" >Paige Bartholomew</span>
               </div>
 
-           <section id="projects">
+           <section>
             <div class="content">
               <div class="projects">
                 <div class="title title-g" style="font-family: 'Playfair Display', serif;"><h2>projects</h2><hr></div>
                 
 
                 <article>
-                  <div class="project project-g1">
+                  <div class="project" id="project1">
                   <h1>project 1</h1>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam praesentium laborum nobis. Neque eligendi doloremque quo, voluptatem harum maxime</p>
                   <a href="#" >more</a>
                 </div>
                 </article>
 
-                <div class="quotes quote-g1">
+                <div class="quotes" id="quote1">
                   <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fuga. Quisquam, cupiditate eos. Illum, nulla animi quasi, nemo provident modi dolore.</span>
                 </div>
 
                 <article>
-                  <div class="project project-g2">
+                  <div class="project" id="project2">
                   <h1>project 2</h1>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam praesentium laborum nobis. Neque eligendi doloremque quo, voluptatem harum maxime fugit suscipit mollitia laboriosam quia? Aliquam fuga dignissimos dolorum assumenda</p>
                   <a href="#" >more</a>
                 </div>
                 </article>
 
-                <div class="quotes quote-g2">
+                <div class="quotes" id="quote2">
                   <span>In each deep darkness, there is a twinkle of luminous and omnifarious spirally.</span>
                   <span style="float: right; font-style: italic;">By me<i class="fas fa-laugh-wink" ;></i></span>
                 </div>
 
                 <article>
-                  <div class="project project-g3">
+                  <div class="project" id="project3">
                   <h1>project 3</h1>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam praesentium laborum nobis. Neque eligendi doloremque quo, voluptatem harum maxime fugit suscipit mollitia laboriosam quia? Aliquam fuga dignissimos dolorum assumenda</p>
                   <a href="#" >more</a>
                 </div>
                 </article>
 
-                <div class="quotes quote-g3" id="quotes">
+                <div class="quotes" id="quote3">
                   <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fuga. Quisquam, cupiditate eos. Illum, nulla animi quasi, nemo provident modi dolore.</span>
                 </div>
 
                 <article>
-                  <div class="project project-g4">
+                  <div class="project" id="project4">
                   <h1>project 4</h1>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam praesentium laborum nobis. Neque eligendi doloremque quo, voluptatem harum maxime fugit suscipit mollitia laboriosam quia? Aliquam fuga dignissimos dolorum assumenda</p>
                   <a href="#" >more</a>
                 </div>
                 </article>
 
-                <div class="quotes quote-g4">
+                <div class="quotes" id="quote4">
                   <span>Accidents happen. That's what everyone says. But in a quantum universe there are no such things as accidents, only possibilities and probabilities folded into existence by perception.</span>
                   <span style="float: right; font-style: italic;">J.Michael Straczynski</span>
                 </div>
