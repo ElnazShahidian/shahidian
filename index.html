@@ -15,7 +15,7 @@
 
    <!-- Font-awesome
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
   <!-- FONT
@@ -38,6 +38,7 @@
 
    <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/index.js"></script>
 
 </head>
@@ -59,25 +60,25 @@
 </body>-->
 
 <body>
-  <div class="site">
+  <div class="intro">
     <div class="menu">
       <ul class="ulmain">
         <li><a href="#">Home</a></li>
         <li><a href="#" onclick="$('#about').animatescroll();">About</a></li>
-        <li class="quo"><a href="#">Quotes</a>
-                                            <ul class="ulq">
-                                              <li><a href="#quote1">quote1</a></li>
+        <li class="menu-button"><a href="#">Quotes</a>
+                                            <ul class="menu-content">
+                                              <li><a href="#quote1">Dr.Bruce H.Lipton</a></li>
                                               <li><a href="#quote2">Anonymous</a></li>
-                                              <li><a href="#quote3">quote3</a></li>
+                                              <li><a href="#quote3">medium</a></li>
                                               <li><a href="#quote4">J.Michael Straczynski</a></li>
-                                            </ul>                 
+                                            </ul>               
                                                </li>
-        <li class="pro"><a href="#">Projects</a>
-                                              <ul class="ulp">
+        <li class="menu-button"><a href="#">Projects</a>
+                                              <ul class="menu-content">
                                                <li><a onclick="$('#project1').animatescroll();">project1</a></li>
-                                               <li><a onclick="$('#project2').animatescroll();">project2</a></li>
-                                               <li><a onclick="$('#project3').animatescroll();">project3</a></li>
-                                               <li><a onclick="$('#project4').animatescroll();">project4</a></li>
+                                               <li><a href="#" onclick="$('#project2').animatescroll();">project2</a></li>
+                                               <li><a href="#" onclick="$('#project3').animatescroll();">project3</a></li>
+                                               <li><a href="#" onclick="$('#project4').animatescroll();">project4</a></li>
                                              </ul>                                                               
                                                 </li>
         <li><a href="#" onclick="$('#contact').animatescroll();">Contact</a></li>
@@ -93,8 +94,8 @@
           </header>
         </div>
 
-            <div class="main">
-              <div class="quotes">
+            <div id="main">
+              <div class="quotes quote1">
                 <span>The universe is a fractal. Whatever energy signiture we carry will be repeated infinitely,again and again... until we change that vibration.</span>
                 <span style="float: right; font-style: italic;" >Paige Bartholomew</span>
               </div>
@@ -106,22 +107,23 @@
                 
 
                 <article>
-                  <div class="project" id="project1">
+                  <div class="project" id="#project1">
                   <h1>project 1</h1>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam praesentium laborum nobis. Neque eligendi doloremque quo, voluptatem harum maxime</p>
-                  <a href="#" >more</a>
+                  <p><a href="#" >more</a></p>
                 </div>
                 </article>
 
                 <div class="quotes" id="quote1">
-                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fuga. Quisquam, cupiditate eos. Illum, nulla animi quasi, nemo provident modi dolore.</span>
+                  <span>The moment you change your perception is the moment you rewrite the chemistry of your body. You are the programmer of your genetic code, DNA activation is your software update.</span>
+                  <span style="float: right; font-style: italic;" >Dr.Bruce H.Lipton</span>
                 </div>
 
                 <article>
                   <div class="project" id="project2">
                   <h1>project 2</h1>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam praesentium laborum nobis. Neque eligendi doloremque quo, voluptatem harum maxime fugit suscipit mollitia laboriosam quia? Aliquam fuga dignissimos dolorum assumenda</p>
-                  <a href="#" >more</a>
+                  <p><a href="#" >more</a></p>
                 </div>
                 </article>
 
@@ -134,23 +136,24 @@
                   <div class="project" id="project3">
                   <h1>project 3</h1>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam praesentium laborum nobis. Neque eligendi doloremque quo, voluptatem harum maxime fugit suscipit mollitia laboriosam quia? Aliquam fuga dignissimos dolorum assumenda</p>
-                  <a href="#" >more</a>
+                  <p><a href="#" >more</a></p>
                 </div>
                 </article>
 
                 <div class="quotes" id="quote3">
-                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, fuga. Quisquam, cupiditate eos. Illum, nulla animi quasi, nemo provident modi dolore.</span>
+                  <span>You live in a Mirrorverse. Your outer world is a reflection of your inner world.</span>
+                  <span style="float: right; font-style: italic;" ><a href="https://medium.com/amp/p/a7ad344be6c0" style="color: black;">medium</a></span>
                 </div>
 
                 <article>
                   <div class="project" id="project4">
                   <h1>project 4</h1>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam praesentium laborum nobis. Neque eligendi doloremque quo, voluptatem harum maxime fugit suscipit mollitia laboriosam quia? Aliquam fuga dignissimos dolorum assumenda</p>
-                  <a href="#" >more</a>
+                  <p><a href="#" >more</a></p>
                 </div>
                 </article>
 
-                <div class="quotes" id="quote4">
+                <div class="quotes" id="quote4" aria-atomic="true" aria-live="polite">
                   <span>Accidents happen. That's what everyone says. But in a quantum universe there are no such things as accidents, only possibilities and probabilities folded into existence by perception.</span>
                   <span style="float: right; font-style: italic;">J.Michael Straczynski</span>
                 </div>
@@ -162,8 +165,17 @@
 
           </div>
 
-            <div class="footer"></div>
+            <div class="footer">
+            <div id="wave">
+
+            </div>
+            
+          
+          
           </div>
+          </div>
+
+          
 </body>
 </html>
 

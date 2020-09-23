@@ -145,24 +145,25 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
   h4 { font-size: 3.0rem; }
   h5 { font-size: 2.4rem; }
   h6 { font-size: 1.5rem; }
-} */
+} 
 
-p {
+/* p {
   margin-top: 0; 
 text-align: justify;
 font-size: 2.4rem;
 line-height: 2.4rem;
-text-indent: 5rem;}
+text-indent: 5rem;} */
 
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB;
+  color: wheat;
   text-decoration: none;
+  cursor: pointer;
  }
 a:hover {
-  color: #0FA0CE; }
+  color: wheat; }
 
 
 /* Buttons
@@ -418,6 +419,7 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {} 
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -433,17 +435,16 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-a{
-  text-decoration: none;
-  color: blanchedalmond;
-  cursor: pointer;
+span a , p a {
+  text-decoration: underline;
 }
   
-.site{
+.intro {
   display: flex;
   flex-direction: column;
   position: relative;
-}
+ }
+
 .menu{
   display: flex;
   justify-content: flex-start;
@@ -457,23 +458,23 @@ a{
   box-shadow: 0 5px 10px #e79b65;;
   }
 
-  .menu .ulmain{
-    display: flex;
-    
+  .menu .ulmain {
+    display: flex ;
     }
   
-  .menu .ulmain li{
-    padding:10px;
+  .ulmain li{
+    padding: 5px;
     list-style: none;
   }
 
   .menu .ulmain a{
     transition: all .3s ease-in-out;
     color: black;
+    padding: 10px;
   }
   
-  .menu .ulmain a:hover{
-    color: rgb(161, 151, 151);
+  .ulmain a:hover{
+    color: rgb(87, 84, 84);
     font-size: 3vmin;
   }
   
@@ -482,51 +483,62 @@ a{
    
   }
 
-  .ulp{
+  .menu-button:hover .menu-content{
+    display: block;
+  }
+
+  .menu-content{
     display: none;
+    position: absolute;
     background-color: rgba(71, 66, 66, 0.7);
     border-radius: 3px;
     text-align: center;
     padding: 0 5px;
+    transform: translate(-30% ,-5%)
   }
 
-  .ulp li a{
+  .menu-content li{
+    padding: 0 10px;
+  }
+
+ .menu-button .menu-content li a{
     color: blanchedalmond;
-  }
-  .ulq{
-    display: none;
-    background-color: rgba(71, 66, 66, 0.7);
-    border-radius: 3px;
-    text-align: center;
-    padding: 0 5px;
+    font-size: 3vmin;
   }
 
- .ulp li a{
-  color: wheat; 
- }
+  .menu-button .menu-content li a:hover{
+    color: rgb(87, 84, 84);
+    font-size: 2.5vmin;
+  }
 
-.header {
-  position: relative;
-   display: flex ;
+  .menu-content:hover{
+    background-color: rgba(165, 162, 162, 0.7);
+  }
+
+  .header {
+    position: relative;
+    display: flex ;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     height: 100vh;
     background-image: linear-gradient(to bottom, rgb(231,155,101) ,rgb(253, 108, 4) ,rgb(0, 0, 0));
-}
+  }
 
   .header::after { 
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 10%;
-  bottom: 0;
-  left: 10%;
-  background-image: url("../images/cover1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; 
-  background-attachment: fixed;
-  background-position: center;
+    animation: fade-slide-down 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 10%;
+    bottom: 0;
+    left: 10%;
+    background-image: url("../images/cover1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center;
+
   }
 
  .about{
@@ -536,13 +548,12 @@ a{
       align-self: center;
       justify-self: center;
       background-color:  hsla(0,0%,100%,.5);
-      
       padding: 40px;
       z-index: 1;
       border-radius: 10px;
-      /* font-family: 'Montserrat', sans-serif; */
       font-family: 'Playfair Display', serif;
   }
+
   .about p {
       font-size: 3.5vmin;
       font-weight: 400;
@@ -552,6 +563,10 @@ a{
       font-size: 4.5vmin;
       font-weight: 800;
   }
+
+  #main{
+    background-color: black;
+  }
   
   .quotes{
     color:black;
@@ -559,9 +574,8 @@ a{
     font-size: 3.5vmin;
   }
   
-
   .content{
-    background: url(../images/spiral1.jpg);
+    background: url(../images/spiral1.jpg) ;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -582,15 +596,11 @@ a{
     margin-top: 10rem;
   }
 
- article{
+  article{
     width: 70%;
     align-self: center;
     padding: 3rem;
     margin: 25rem;
-  }
-
-  article a{
-    text-decoration: underline;
   }
   
   article:nth-of-type(1) {
@@ -624,13 +634,13 @@ a{
   .quotes:nth-of-type(2){
     background: rgb(212, 86, 12);
     box-shadow: 0 5px 15px rgb(212, 86, 12);
+    
   }
 
   .quotes:nth-of-type(3){
     background: rgb(240, 198, 93);
     width: 100%;
     box-shadow: 0 5px 15px rgb(240, 198, 93);
-
   }
 
   .quotes:nth-of-type(3) span{
@@ -641,11 +651,12 @@ a{
     position: absolute;
     right: 2.5rem;
     padding-top: .5rem;
-  }
+  } 
 
   .quotes:nth-of-type(4){
     background: rgb(34, 91, 167);
     box-shadow: 0 5px 15px  rgb(34, 91, 167);
+    width: 100%;
   }
 
   .quotes:nth-of-type(5){
@@ -653,5 +664,15 @@ a{
     box-shadow: 0 5px 15px rgb(137, 70, 77);
   }
 
-  
-                
+  @keyframes fade-slide-down {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-4rem);
+              transform: translateY(-4rem);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+              transform: none;
+    }
+  }
